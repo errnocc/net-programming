@@ -32,7 +32,7 @@ int main(int argc, char *argv[]) {
 		exit(-1);
 	}
 
-	if (listen(listenfd, LISTENQ)) {
+	if (listen(listenfd, LISTENQ) == -1) {
 		perror("listen error");
 		exit(-1);
 	}
